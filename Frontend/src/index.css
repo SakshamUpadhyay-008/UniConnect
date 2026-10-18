@@ -1,0 +1,116 @@
+/* ==========================================================================
+   UNICONNECT DESIGN SYSTEM
+   ========================================================================== */
+:root {
+  --bg-primary: #050B16;
+  --bg-secondary: #0B1730;
+  --bg-navy-elevated: #112042;
+  --bg-card-dark: #0D1C3C;
+  --bg-card-light: #FFFFFF;
+
+  --accent-lime: #D8FF62;
+  --accent-lime-hover: #E2FF85;
+  --accent-lime-secondary: #A8EF43;
+  --accent-lime-subtle: rgba(216, 255, 98, 0.12);
+  --accent-lime-border: rgba(216, 255, 98, 0.35);
+
+  --text-primary-dark: #F8FAFC;
+  --text-secondary-dark: #A9B5C8;
+  --text-muted-dark: #64748B;
+  --text-primary-light: #102345;
+  --text-secondary-light: #475569;
+  --text-muted-light: #64748B;
+
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(16, 35, 69, 0.1);
+
+  --color-success: #32C56A;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+
+  --font-heading: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --glow-lime: 0 0 35px rgba(216, 255, 98, 0.18);
+  --glow-navy: 0 20px 50px rgba(5, 11, 22, 0.8);
+
+  --radius-hero-card: 28px;
+  --radius-card: 20px;
+  --radius-sm: 10px;
+  --radius-pill: 9999px;
+
+  --transition-fast: 0.16s ease;
+  --transition-smooth: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary-dark);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary-dark);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--accent-lime);
+  color: var(--text-primary-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #172749;
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #253966;
+}
+
+/* Base Utility Classes */
+.lime-highlight {
+  color: var(--accent-lime);
+}
+
+@keyframes pulseLime {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulseLime 4s ease-in-out infinite;
+}
